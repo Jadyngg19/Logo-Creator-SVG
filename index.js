@@ -36,7 +36,7 @@ function promptUser() {
         {
             type: "input",
             name: "text",
-            message: "Please type the text you would like displayed (Can not exceed 3 characters.",
+            message: "Please type the text you would like displayed (Can not exceed 3 characters.)",
         },
 
         {
