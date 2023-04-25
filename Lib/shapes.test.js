@@ -1,4 +1,4 @@
-const {Circle, Triangle, Square} = require("./shapes.js");
+const {Circle, Triangle, Square} = require("/Users/jadyn/Bootcamp/Logo-Creator-SVG/lib/shapes");
 
 describe("Circle Test", () => {
     test("Test for a circle with a #2986cc background", () => {
