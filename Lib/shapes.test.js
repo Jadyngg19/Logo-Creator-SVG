@@ -1,11 +1,11 @@
 const {Circle, Triangle, Square} = require("/Users/jadyn/Bootcamp/Logo-Creator-SVG/lib/shapes");
 
 describe("Circle Test", () => {
-    test("Test for a circle with a #2986cc background", () => {
+    test("Test for a circle with a Red background", () => {
         const shape = new Circle();
         shape.setColor("#2986cc");
         expect(shape.render()).toEqual(
-            `<circle cx="150" cy="115" r="80" fill="#2986cc"/>`
+            `<circle cx="150" cy="115" r="80" fill="Red"/>`
         );
     });
 });
