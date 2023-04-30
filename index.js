@@ -24,7 +24,7 @@ function writeToSVGFile(fileName, answers) {
   svgString += "</svg>";
 
   fs.writeFile(fileName, svgString, (err) => {
-    err ? console.log(err) : console.log("Newly-Generated-Logo.svg");
+    err ? console.log(err) : console.log("Newly Generated Logo.svg");
   });
 }
 
@@ -61,7 +61,7 @@ function promptUser() {
         console.log("Must enter a value of no more than 3 characters");
         promptUser();
       } else {
-        writeToSVGFile("Newly Generated Logo.svg", answers);
+        writeToSVGFile("Newly-Generated-Logo.svg", answers);
       }
     });
 }
