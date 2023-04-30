@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { Circle, Triangle, Square } = require("./lib/shapes");
+const { Circle, Triangle, Square } = require("./Lib/shapes")
 
 function writetoFile(fileName, answers) {
     let svgString = "";
@@ -43,7 +43,7 @@ function promptUser() {
             type: "checkbox",
             name: "textColor",
             message: "Please choose what color you would like your text to be.",
-            choices: ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "White"]
+            choices: ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "White"],
         },
 
         {
