@@ -21,11 +21,11 @@ function writetoFile(fileName, answers) {
         svgString += `<rect x="73" y="40" width="160" height"160" fill="${answers.shapeBackgroundColor}"/>`;
     }
 
-    svgString += `<text x="150" y="130" text-anchor="middle font-size="40" fill=${answers.textColor}`;
+    svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}"/>`;
     svgString += "<g/>";
     svgString += "</svg>";
 
-    fs.writeFile(fileName, scgString, (err) => {
+    fs.writeFile(fileName, svgString, (err) => {
         err ? console.log(err) : console.log("Newly Generated Logo.svg");
     });
 }
@@ -69,6 +69,6 @@ function promptUser() {
             writetoFile("Newly Generated Logo.svg", answers);
         }
     });
-
-    promptUser();
 }
+
+promptUser();
