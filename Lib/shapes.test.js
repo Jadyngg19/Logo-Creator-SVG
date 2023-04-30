@@ -1,9 +1,9 @@
-const {Circle, Triangle, Square} = require("./Lib/shapes.js");
+const { Circle, Triangle, Square } = require("./Lib/shapes.js");
 
 describe("Circle Test", () => {
     test("Test for a circle with a Red background", () => {
         const shape = new Circle();
-        shape.setColor("#2986cc");
+        shape.setColor("Red");
         expect(shape.render()).toEqual(
             `<circle cx="150" cy="115" r="80" fill="Red"/>`
         );
@@ -11,7 +11,7 @@ describe("Circle Test", () => {
 });
 
 describe("Triangle Test", () => {
-    test("Test for a traingle with a Green background", () => {
+    test("Test for a triangle with a Green background", () => {
         const shape = new Triangle();
         shape.setColor("Green");
         expect(shape.render()).toEqual(
