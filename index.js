@@ -16,6 +16,7 @@ function writeToSVGFile(fileName, answers) {
     shapeChoice = new Square();
   }
 
+  shapeChoice.setColor(answers.shapeBackgroundColor);
   svgString += shapeChoice.render();
 
   svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
