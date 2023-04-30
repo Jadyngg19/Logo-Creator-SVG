@@ -22,7 +22,7 @@ function writetoFile(fileName, answers) {
     }
 
     svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}"/>`;
-    svgString += "<g/>";
+    svgString += "</g>";
     svgString += "</svg>";
 
     fs.writeFile(fileName, svgString, (err) => {
