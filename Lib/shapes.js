@@ -5,6 +5,10 @@ class Shape {
     setColor(colorVar) {
         this.color = colorVar;
     }
+    
+    render() {
+        return "";
+    }
 }
 
 class Circle extends Shape {
@@ -14,8 +18,8 @@ class Circle extends Shape {
 }
 
 class Triangle extends Shape {
-    render () {
-        return `<polygon points="150, 18 244, 182 56, 182" fill="${this.color}"/>`;
+    render() {
+        return `<polygon points="150,18 244,182 56,182" fill="${this.color}"/>`;
     }
 }
 
@@ -24,5 +28,3 @@ class Square extends Shape {
         return `<rect x="73" y="40" width="160" height="160" fill="${this.color}"/>`;
     }
 }
-
-module.exports = {Circle, Triangle, Square};
