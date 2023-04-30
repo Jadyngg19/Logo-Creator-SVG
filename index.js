@@ -8,40 +8,25 @@ function writeToSVGFile(fileName, answers) {
   svgString += "<g>";
 
   let shapeChoice;
-  let shapeWidth;
-  let shapeHeight;
   if (answers.shapeChoice === "Circle") {
     shapeChoice = new Circle();
     svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
-    shapeWidth = 160;
-    shapeHeight = 160;
   } else if (answers.shapeChoice === "Triangle") {
     shapeChoice = new Triangle();
     svgString += `<polygon points="150,18 244,182 56,182" fill="${answers.shapeBackgroundColor}"/>`;
-    shapeWidth = 188;
-    shapeHeight = 165;
   } else {
     shapeChoice = new Square();
-    svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
-    shapeWidth = 160;
-    shapeHeight = 160;
+    svgString += `<rect x="73" y="40" width="160" height="160" text-anchor="middle" fill="${answers.shapeBackgroundColor}"/>`;
   }
-  
-  const centerX = 150; // x coordinate of the center of the SVG canvas
-  const centerY = 115; // y coordinate of the center of the SVG canvas
-  const textX = centerX;
-  const textY = centerY + (shapeHeight / 2) - 10; // adjust the vertical position of the text element
-  
-  svgString += `<text x="${textX}" y="${textY}" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
+
+  svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
   svgString += "</g>";
   svgString += "</svg>";
-  
+
   fs.writeFile(fileName, svgString, (err) => {
     err ? console.log(err) : console.log("Newly Generated Logo.svg");
   });
 }
-
-
 
 function promptUser() {
   inquirer
