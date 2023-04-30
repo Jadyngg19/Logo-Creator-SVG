@@ -8,14 +8,14 @@ function writeToSVGFile(fileName, answers) {
   svgString += "<g>";
 
   let shapeChoice;
-  if (answers.shapeChoice === "Circle") {
+  if (answers.shapeChoice.includes("Circle")) {
     shapeChoice = new Circle();
-  } else if (answers.shapeChoice === "Triangle") {
+  } else if (answers.shapeChoice.includes("Triangle")) {
     shapeChoice = new Triangle();
   } else {
     shapeChoice = new Square();
   }
-  
+
   svgString += shapeChoice.render();
 
   svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
@@ -26,6 +26,7 @@ function writeToSVGFile(fileName, answers) {
     err ? console.log(err) : console.log("Newly Generated Logo.svg");
   });
 }
+
 
 function promptUser() {
   inquirer
