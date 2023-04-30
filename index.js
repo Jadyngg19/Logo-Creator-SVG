@@ -7,13 +7,13 @@ function writetoFile(fileName, answers) {
     svgString =
     '<svg version="1.1" width="300" height="200" xmlns="https://www.w3.org/2000/svg">';
     svgString += "<g>";
-    svgString += `${answers.shape}`;
+    svgString += `${answers.shapeChoice}`;
 
     let shapeChoice;
-    if (answers.shape === "Circle") {
+    if (answers.shapeChoice === "Circle") {
         shapeChoice = new Circle();
         svgString += `<circle cx="150" cy"115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
-    } else if (answers.shape === "Triangle") {
+    } else if (answers.shapeChoice === "Triangle") {
         shapeChoice = new Triangle();
         svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
     } else {
