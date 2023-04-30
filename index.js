@@ -43,7 +43,7 @@ function promptUser() {
             type: "checkbox",
             name: "textColor",
             message: "Please choose what color you would like your text to be.",
-            choices: ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink"]
+            choices: ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "White"]
         },
 
         {
@@ -57,7 +57,7 @@ function promptUser() {
             type: "checkbox",
             name: "shapeBackgroundColor",
             message: "Please choose what color you would like your background to be for the shape of your logo.",
-            choices: ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink"],
+            choices: ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "White"],
         },
     ])
 
