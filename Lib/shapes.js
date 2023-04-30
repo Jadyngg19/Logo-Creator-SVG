@@ -3,7 +3,7 @@ class Shape {
         this.color = "";
     }
     setColor(colorVar) {
-        this.color
+        this.color = colorVar;
     }
 }
 
