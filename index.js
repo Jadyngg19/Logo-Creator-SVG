@@ -18,7 +18,7 @@ function writetoFile(fileName, answers) {
         svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${answers.shapeBackgroundColor}"/>`;
     } else {
         shapeChoice = new Square();
-        svgString += `<rect x="73" y="40" width="160" height"160" fill="${answers.shapeBackgroundColor}"/>`;
+        svgString += `<rect x="73" y="40" width="160" height="160" fill="${answers.shapeBackgroundColor}"/>`;
     }
 
     svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}"/>`;

@@ -25,7 +25,7 @@ describe("Square Test", () => {
         const shape = new Square();
         shape.setColor("Pink");
         expect(shape.render()).toEqual(
-            `<rect x="73" y="40" width="160" height"160" fill="Pink"/>`
+            `<rect x="73" y="40" width="160" height="160" fill="Pink"/>`
         );
     });
 });
