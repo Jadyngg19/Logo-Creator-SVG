@@ -10,14 +10,13 @@ function writeToSVGFile(fileName, answers) {
   let shapeChoice;
   if (answers.shapeChoice === "Circle") {
     shapeChoice = new Circle();
-    svgString += `<circle cx="150" cy="115" r="80" fill="${answers.shapeBackgroundColor}"/>`;
   } else if (answers.shapeChoice === "Triangle") {
     shapeChoice = new Triangle();
-    svgString += `<polygon points="150,18 244,182 56,182" fill="${answers.shapeBackgroundColor}"/>`;
   } else {
     shapeChoice = new Square();
-    svgString += `<rect x="73" y="40" width="160" height="160" text-anchor="middle" fill="${answers.shapeBackgroundColor}"/>`;
   }
+  
+  svgString += shapeChoice.render();
 
   svgString += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${answers.textColor}">${answers.text}</text>`;
   svgString += "</g>";
