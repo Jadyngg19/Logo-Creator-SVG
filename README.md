@@ -6,7 +6,11 @@
 
   ## Installation
 
-  To install Logo Creator SVG, you will need to have Node.js and npm (or yarn) installed on your computer. 1. Clone or download the repository. 2. Open a terminal window and navigate to the project directory. 3. Run npm install (or yarn install) to install the necessary dependencies.
+  To install Logo Creator SVG, you will need to have Node.js and npm (or yarn) installed on your computer. 
+
+  1. Clone or download the repository. 
+  2. Open a terminal window and navigate to the project directory. 
+  3. Run npm install (or yarn install) to install the necessary dependencies.
 
   ## Building Blocks
 
